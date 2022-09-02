@@ -1,13 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100&family=Montserrat+Alternates&family=Source+Sans+Pro:wght@200;300;600&display=swap');
+:root
+{
+  --bg-main:#131722;
+  --light-bg:#24baef;
+  --main-color:#fff
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+font-family: 'Montserrat Alternates', sans-serif !important ;
+  background-color: var(--bg-main) !important;
+  color: var(--main-color ) !important;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+input{
+  background-color: transparent !important;
+  color: var(--main-color) !important;
+}
+.border
+{
+  height: 1px ;
+  background-color: var(--main-color);
+}
+a 
+{
+  color: var(--main-color) !important;
+  text-decoration: none !important;
+}
+.pagination:hover
+{
+  cursor: pointer;
+}
+.nav-link:hover
+{
+color: rgba(255,193,7) !important;
+}
+.navbar-nav i:hover{
+  color: rgba(255,193,7);
 }
