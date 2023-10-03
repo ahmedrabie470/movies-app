@@ -9,7 +9,7 @@ let {trendingMovies , trendingTv} =  useContext(movieContext)
 
   return (
     <>
-{trendingMovies?<div className="row g-5 justify-content-center">
+{trendingMovies.length>0?<div className="row g-5 justify-content-center">
       <div className="col-md-3 d-flex align-items-center ">
         <div>
         <div className="border w-25 mb-4"></div>
@@ -28,7 +28,7 @@ let {trendingMovies , trendingTv} =  useContext(movieContext)
         <div className="movie position-relative ">
           <img className='w-100 ' src={'https://image.tmdb.org/t/p/w500'+movie.poster_path} alt="" />
           <div className='d-flex   align-items-center  '>
-          <h2 className='h6 py-3 bg-black w-100 text-center'>{movie.title} </h2>
+          <h2 className='h6 py-3 bg-black w-100 text-center text-muted'>{movie.title} </h2>
           <div className='position-absolute bg-warning  end-0  top-0 text-center rounded-1 p-1'>{movie.media_type}</div>
           </div>
         </div>   
@@ -37,8 +37,10 @@ let {trendingMovies , trendingTv} =  useContext(movieContext)
       </div>)}
 
     
-    </div>:<div className='vh-100  d-flex align-items-center justify-center-center'>
-    <i className='fas fa-spinner fa-spin'></i>    
+    </div>:<div className='vh-100  d-flex d-flex justify-content-center align-items-center'>
+    <div  >
+    <i className='fas fa-spinner fa-spin text-warning '></i>
+    </div>
     </div>}
      
 {trendingTv?  <div className="row g-5 justify-content-center">
@@ -58,14 +60,16 @@ let {trendingMovies , trendingTv} =  useContext(movieContext)
         <div className="tv position-relative mt-5 p-0">
           <img className='w-100 ' src={'https://image.tmdb.org/t/p/w500'+tv.poster_path} alt="" />
           <div className='d-flex   align-items-center  '>
-          <h2 className='h6 py-3  w-100 text-center bg-black '>{tv.name} </h2>
+          <h2 className='h6 py-3  w-100 text-center text-muted bg-black '>{tv.name} </h2>
           <div className='bg-warning position-absolute end-0 top-0 w-259 text-center rounded-1 px-2 '>{tv.media_type}</div>
           </div>
         </div>
         </Link>
       </div>)}
-    </div> :<div className='vh-100  d-flex align-items-center justify-center-center'>
-    <i className='fas fa-spinner fa-spin'></i>    
+    </div> :<div className='vh-100  d-flex d-flex justify-content-center align-items-center'>
+    <div  >
+    <i className='fas fa-spinner fa-spin text-warning fs-1'></i>
+    </div>
     </div>}
   
     

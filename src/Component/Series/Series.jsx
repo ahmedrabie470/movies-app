@@ -18,7 +18,7 @@ export default function Tv() {
   },[])
   return (
  <>
-   {trendingTv?<div className="row justify-content-center">  
+   {trendingTv.length>0?<div className="row justify-content-center">  
    <div className="col-md-3 d-flex align-items-center ">
         <div>
         <div className="border w-25 mb-4"></div>
@@ -33,12 +33,14 @@ export default function Tv() {
         <div className="movie   p-3">
         <Link to={`/tvdetails/${tv.id}`}>
           <img className='w-100' src={'https://image.tmdb.org/t/p/w500'+tv.poster_path} alt="" />
-          <h2 className='h6 py-3 bg-black w-100 text-center'>{tv.name} </h2>
+          <h2 className='h6 py-3 bg-black w-100 text-center text-muted'>{tv.name} </h2>
           </Link>
         </div>
       </div>)}
-    </div>:<div className='vh-100  d-flex align-items-center justify-center-center'>
-    <i className='fas fa-spinner fa-spin'></i>    
+    </div>:<div className='vh-100  d-flex d-flex justify-content-center align-items-center'>
+    <div  >
+    <i className='fas fa-spinner fa-spin text-warning fs-1 '></i>
+    </div>
     </div>}
 
 
